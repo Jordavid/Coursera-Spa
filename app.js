@@ -41,7 +41,7 @@
             }
 
             return totalStringValue;
-        };
+        };  
 
         $scope.upper = function (){
             let upCase = $filter('uppercase');
