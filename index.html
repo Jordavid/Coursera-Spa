@@ -16,17 +16,18 @@
             <h1 class="title has-text-centered">My first AngularJS App <i class="fa fa-wifi" aria-hidden="true"></i> </h1>
         </div>
         
-        <div ng-controller='myFirstController' class="notification is-dark">
+        <div ng-controller='myFirstController' class="notification is-boxed">
             <h2 class="title is-center">{{greet()}} {{name}}</h2>
             
-            <span class="label" style="color: wheat">Type something</span>
+            <span class="label">Type something</span>
             <input type="text" ng-model='name' class="input">
-            
-            <h1>Name Calculator</h1>
+            <hr class="has-background-black">
             <div>
+                <h1 class="title">Name Calculator</h1>
                 <div>
-                    Your name:
-                    <input type="text" ng-model='username' ng-keyup="displayNumeric();" ng-blur='upper();'>
+                    
+                    <span class="label">Your name</span>
+                    <input type="text" ng-model='username' ng-keyup="displayNumeric();" ng-blur='upper();' class="input">
                 </div>
                 <div>
                     Total Numeric value of the name is: {{totalValue}}
