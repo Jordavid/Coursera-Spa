@@ -20,7 +20,7 @@
     myFirstController.$inject = ['$scope', '$filter'];
 
     function myFirstController($scope, $filter){
-        $scope.name = "Angularjs";
+        $scope.name = "";
 
         $scope.greet = function (){
             return "Hello ";

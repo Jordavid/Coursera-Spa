@@ -4,26 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="angular.min.js"></script>
-    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
     <title>Coursera SPA App</title>
 </head>
 <body ng-app='myFirstApp'>
-    <h1>My first AngularJS App</h1>
-    <div ng-controller='myFirstController'>
-        <h2>{{greet()}} {{name}}</h2>
-        <input type="text" ng-model='name'>
+    <div class="container">
+        <div class="notification is-info">
+            <h1 class="title has-text-centered">My first AngularJS App <i class="fa fa-wifi" aria-hidden="true"></i> </h1>
+        </div>
         
-        <h1>Name Calculator</h1>
-        <div>
+        <div ng-controller='myFirstController' class="notification is-dark">
+            <h2 class="title is-center">{{greet()}} {{name}}</h2>
+            
+            <span class="label" style="color: wheat">Type something</span>
+            <input type="text" ng-model='name' class="input">
+            
+            <h1>Name Calculator</h1>
             <div>
-                Your name:
-                <input type="text" ng-model='username' ng-keyup="displayNumeric();" ng-blur='upper();'>
-            </div>
-            <div>
-                Total Numeric value of the name is: {{totalValue}}
+                <div>
+                    Your name:
+                    <input type="text" ng-model='username' ng-keyup="displayNumeric();" ng-blur='upper();'>
+                </div>
+                <div>
+                    Total Numeric value of the name is: {{totalValue}}
+                </div>
             </div>
         </div>
+
+
+        <footer>
+          <div class="notification content has-text-centered is-dark" >
+            <p class="">
+              By <strong>Daouda Sanogo</strong>
+              <i class="fa fa-copyright" aria-hidden="true"></i> All rights reserved.
+            </p>
+          </div>
+        </footer>
     </div>
 
 </body>
